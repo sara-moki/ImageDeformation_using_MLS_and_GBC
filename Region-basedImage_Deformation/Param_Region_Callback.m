@@ -11,7 +11,7 @@ ud.polyg_planar = ud.contents(get(hObject,'Value'));
 % if strcmp(ud.polyg_planar,'Polygon')
     ud.polyg{ud.index} = drawpolygon('Color',ud.Handle_Color,'InteractionsAllowed','all','LineWidth',1.3);
 % end     
-%%%%%%%%%Using Polar coordinates to map Legendre points to region-handle
+%%%%%%%%%Using Polar coordinates for Legendre points parametrization in region-handle
 ud.polyg{ud.index}.UserData = ud.polyg{ud.index}.Position;
 polyg=polyshape(ud.polyg{ud.index}.UserData);
 [xpole,ypole] = centroid(polyg);
