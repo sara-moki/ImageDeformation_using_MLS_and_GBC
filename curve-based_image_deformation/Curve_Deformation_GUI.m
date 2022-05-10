@@ -126,7 +126,7 @@ while strcmpi(seltype,'normal')
 end
 xs=linspace(0,1,100);
 xs1=linspace(0,1,length(ud.InputSplinePoints{ud.index}));
-ud.pp{ud.index}=spline(xs1,[ud.InputSplinePoints{ud.index}(:,1)';ud.InputSplinePoints{ud.index}(:,2)']);
+ud.pp{ud.index}=spline(xs1,[0 ud.InputSplinePoints{ud.index}(:,1)' 0; 0 ud.InputSplinePoints{ud.index}(:,2)' 0]);
 x1=ppval(ud.pp{ud.index},xs');
 ud.InputPoints{ud.index} = ppval(ud.pp{ud.index},ud.xG');
 diff_InputCurve=fnder(ud.pp{ud.index},1);  
