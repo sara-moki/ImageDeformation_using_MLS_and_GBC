@@ -47,7 +47,7 @@ switch(action)
          hold on 
          xs=linspace(0,1,100);
          xs1=linspace(0,1,length(ud.InputSplinePoints{ud.index}));              
-         ud.qq{ud.index}=spline(xs1,[ud.OutputSplinePoints{ud.index}(:,1)';ud.OutputSplinePoints{ud.index}(:,2)']);
+         ud.qq{ud.index}=spline(xs1,[0 ud.OutputSplinePoints{ud.index}(:,1)' 0; 0 ud.OutputSplinePoints{ud.index}(:,2)' 0]);
          x1=ppval(ud.qq{ud.index},xs');
          ud.OutputPoints_based{ud.index}=ppval(ud.qq{ud.index},ud.xG');
          hold on;
