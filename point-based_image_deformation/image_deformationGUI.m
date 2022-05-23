@@ -245,7 +245,7 @@ if 0==isaninteger(grid_r_divid) && 0==isaninteger(grid_c_divid)
    ud.grid_c = ud.grid_c+(ud.subgrid_column - mod(ud.grid_c,ud.subgrid_column)) ;           
 end 
 [ud.xfine,ud.yfine] = meshgrid(1:1:ud.grid_r+1,1:1:ud.grid_c+1);
-[ud.xcoarse,ud.ycoarse] = meshgrid(1:grid_r_divid:ud.resol_row+1,1:grid_c_divid:ud.resol_column+1);
+[ud.xcoarse,ud.ycoarse] = meshgrid(1:grid_r_divid:ud.grid_r+1,1:grid_c_divid:ud.grid_c+1);
 hgrid = mesh(ud.xfine,ud.yfine);
 delete(hgrid);
 Z = zeros(ud.grid_r+1,ud.grid_c+1);
