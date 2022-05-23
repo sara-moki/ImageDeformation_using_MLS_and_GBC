@@ -229,8 +229,6 @@ end
 [C,indexFound] = min(normpoints);
 
 
-
-
 % --- Executes on button press in Grid.
 function Grid_Callback(hObject, eventdata, handles)
 ud = get(handles.figure1,'userdata');
@@ -247,7 +245,7 @@ if 0==isaninteger(grid_r_divid) && 0==isaninteger(grid_c_divid)
    ud.grid_c = ud.grid_c+(ud.subgrid_column - mod(ud.grid_c,ud.subgrid_column)) ;           
 end 
 [ud.xfine,ud.yfine] = meshgrid(1:1:ud.grid_r+1,1:1:ud.grid_c+1);
-[ud.xcoarse,ud.ycoarse] = meshgrid(1:ud.subgrid_row:ud.grid_r+1,1:ud.subgrid_column:ud.grid_c+1);
+[ud.xcoarse,ud.ycoarse] = meshgrid(1:grid_r_divid:ud.resol_row+1,1:grid_c_divid:ud.resol_column+1);
 hgrid = mesh(ud.xfine,ud.yfine);
 delete(hgrid);
 Z = zeros(ud.grid_r+1,ud.grid_c+1);
@@ -259,6 +257,8 @@ hold on;
 % plot(ud.xx,ud.yy,'ro');
 set(ud.hpatch,'Facealpha',0);
 set(handles.figure1,'userdata',ud);
+
+
  
 % --- Executes on button press in ROI.
 function ROI_Callback(hObject, eventdata, handles)
@@ -306,7 +306,7 @@ end
 [filename,pathname]=uigetfile('*.*');
 Im = flipud(imresize(imread(filename),[ud.resol_row+1,ud.resol_column+1]));
 [ud.xfine,ud.yfine] = meshgrid(1:1:ud.resol_row+1,1:1:ud.resol_column+1);
-[ud.xcoarse,ud.ycoarse] = meshgrid(1:ud.sub_resol_r:ud.resol_row+1,1:ud.sub_resol_c:ud.resol_column+1);
+[ud.xcoarse,ud.ycoarse] = meshgrid(1:resol_r_divid:ud.resol_row+1,1:resol_c_divid:ud.resol_column+1);
 Z = zeros(size(Im,2),size(Im,1));
 ud.hpatch = mesh(ud.xfine,ud.yfine,Z,Im, ... % Plot surface%%%%%%%%%%%%%%%%%%%%%%%
 'FaceColor', 'texturemap', ...
