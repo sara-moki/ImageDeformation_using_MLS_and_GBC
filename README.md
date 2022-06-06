@@ -12,4 +12,6 @@ These are graphical user interface (GUI) tools for image deformation using movin
 ### Please check README.md files for each tool that are provided in each folder.
 
 ---
-&copy; Sara Alkiswani 
+## Copyright
+---
+Unless marked otherwise, all code is Copyright &copy; Sara Alkiswani, 2022. 
