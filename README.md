@@ -1,4 +1,4 @@
-# ImageDeformation using MLS and GBC
+# Image Deformation using MLS and GBC
 https://github.com/sara-moki/ImageDeformation_using_MLS_and_GBC
 
 ---
