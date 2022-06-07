@@ -9,7 +9,7 @@ To use this tool, a user can select whether to execute deformation on a curve, a
 - In the deformation mode, one can switch between deformation classes, as well as modify the scale parameter (*alpha*). 
 - To save the outcome, click *Save*, and to start a new application, left-click twice then press *Reset* button.
 
---
+---
 
 ## Reference
 
