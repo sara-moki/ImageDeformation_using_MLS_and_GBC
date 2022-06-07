@@ -1,7 +1,7 @@
 # Point-based Image Deformation
-
-### This graphical user interface tool is an implementation for *point-based image deformation using moving least squares*. 
 ---
+This graphical user interface tool is an implementation for *point-based image deformation using moving least squares*. 
+
 To use this tool, a user can select whether to execute deformation on a curve, a grid or an image, where the resolution or the corse grid size can be adjusted to reduce the number of pixels of the chosen grid or image. 
 - To add the control points (handles), press *select markers*, and then place them by left-clicking and then finish by right-clicking.
 - After placing all the handles, the user may select the deformation class (affine, similarity or rigid), then press * Interactive Deformation*.
