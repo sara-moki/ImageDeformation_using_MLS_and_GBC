@@ -1,13 +1,12 @@
 # Point-based Image Deformation
 This is a graphical user interface tool for implementing *point-based image deformation using moving least squares*
 ---
-To use this tool, a user can select whether to execute deformation on a grid or an image, where the
-resolution or the grid size can be adjusted. 
-- Before pressing on *Add Polygon*, select the type of coordinates (WC for convex regions only).
-- To place the intersection-free handles, for every handle, place the vertices first by left-clicking and then finish by right-clicking.
-- After placing all the handles, press *Deform*.
-- To excute the deformation, one can place the cursor on polgon’s vertices and drag them while left-clicking. 
-
+To use this tool, a user can select whether to execute deformation on a curve, a grid or an image, where the resolution or the corse grid size can be adjusted to reduce the number of pixels of the chosen grid or image. 
+- To add the control points (handles), press *select markers*, and then place them by left-clicking and then finish by right-clicking.
+- After placing all the handles, the user may select the deformation class (affine, similarity or rigid), then press * Interactive Deformation*.
+- To excute the deformation, one can place the cursor on the handle and move them while left-clicking. 
+- In the deformation mode, one can switch between deformation classes, as well as modify the scale parameter (*alpha*). 
+- To save the outcome, click *Save*, and to start a new application, left-click twice then press *Reset* button.
 
 ---
 ##Reference
